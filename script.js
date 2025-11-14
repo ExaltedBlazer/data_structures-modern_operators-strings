@@ -97,6 +97,11 @@ const restaurant = {
   },
 };
 
+const airline = 'TAP Air Portugal'
+
+/*
+//// Challenge 3
+
 const gameEvents = new Map([
   [17, '⚽ Goal'],
   [36, '🔁 Substitution'],
@@ -113,9 +118,33 @@ const gameEvents = new Map([
 
 // 1
 console.log(gameEvents.values());
-//const events
+const events = new Set(gameEvents.values());
+console.log(events);
 
-/*
+const arrayEvent = [...events]
+console.log(arrayEvent);
+
+// 2
+gameEvents.delete(64);
+
+//3
+
+const time = [...gameEvents.keys()];
+console.log(time);
+
+const removedTime = time.pop();
+console.log(removedTime);
+
+console.log(`An event happened, on average, everry ${removedTime / gameEvents.size} minutes`);
+
+// 4
+
+for (const [min, event] of gameEvents) {
+  const half = min <= 45 ? 'FIRST' : 'SECOND';
+  console.log(` [${half} HALF] ${min}: ${event}`);
+
+}
+
 /// Maps: Iteration
 
 const question = new Map([
